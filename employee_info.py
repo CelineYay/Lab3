@@ -24,20 +24,16 @@ def calculate_average_salary():
     count = 0
     for item in employee_data:
         count +=1
-        sum += int(item['salary'])
+        sum += int(item["salary"])
     average = sum / count
     return average
 
-
-    return average
-
 def get_employees_by_dept(department):
-    result = []
-
-    # Add your implementation from here
-
-
-    return result
+    results = []
+    for items in employee_data:
+        if items["department"] == department:
+            results.append(items)
+    return results
 
 def display_all_records():
     print(("Name" + "\t" +"Age" +"\t" +"Department" +"\t" +"Salary" ).expandtabs(15))
